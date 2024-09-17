@@ -1,11 +1,15 @@
 # Technical Assessment
 ## Overview
 
-Framework described below was written for JSONPlaceholder API. It uses WebClient for sending requests and AssertJ for assertions. For working with test data Apache Commons and Jackson libraries were used.
+Framework described below was written for JSONPlaceholder API. It uses WebClient for sending requests and AssertJ for assertions. For working with test data Apache Commons and Jackson libraries were used. Because framework covers lower level integration tests, test cases were written directly in java instead of using BDD based solutions which are better suited for higher-level, user-centric scenarios.  
+
+## Setup
+
+Framework requires JDK v17 and Maven. In order to use the framework download the code from repository, navigate to the main directory in terminal and run it with `mvn test` command. JSONPlaceholder API does not require authentication. 
 
 ## Scope
 
-Tests were created for all endpoints exposed by the API:
+JSONPlaceholder API exposes following endpoints:
 - albums
 - comments
 - photos
@@ -13,7 +17,7 @@ Tests were created for all endpoints exposed by the API:
 - todos
 - users
 
-For every endpoint basic CRUD operations were covered by tests. Due to the fact that JSONPlaceholder does not provide request body validation negative test cases we limited to one per endpoint (triggering 404 - NOT FOUND error).
+Tests in the framework were grouped in separate test classes per endpoint. For every endpoint basic CRUD operations were covered by tests. Due to the fact that JSONPlaceholder does not provide request's body validation negative test cases we limited to one per endpoint (triggering 404 - NOT FOUND error).
 
 ## Reporting
 
