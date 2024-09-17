@@ -117,7 +117,7 @@ public class UsersTests {
 
         User user = new User(record);
 
-        ResponseEntity<String> response = webClient.put()
+        ResponseEntity<String> response = webClient.patch()
                 .uri(Users.URL + "/" + user.getId())
                 .contentType(APPLICATION_JSON)
                 .body(BodyInserters.fromValue(user.toJSONString()))

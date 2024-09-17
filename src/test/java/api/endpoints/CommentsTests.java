@@ -117,7 +117,7 @@ public class CommentsTests {
 
         Comment comment = new Comment(record);
 
-        ResponseEntity<String> response = webClient.put()
+        ResponseEntity<String> response = webClient.patch()
                 .uri(Comments.URL + "/" + comment.getId())
                 .contentType(APPLICATION_JSON)
                 .body(BodyInserters.fromValue(comment.toJSONString()))

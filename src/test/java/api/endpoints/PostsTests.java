@@ -121,7 +121,7 @@ public class PostsTests {
 
         Post post = new Post(record);
 
-        ResponseEntity<String> response = webClient.put()
+        ResponseEntity<String> response = webClient.patch()
                 .uri(Posts.URL + "/" + post.getId())
                 .contentType(APPLICATION_JSON)
                 .body(BodyInserters.fromValue(post.toJSONString()))
