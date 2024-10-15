@@ -1,4 +1,4 @@
-# Technical Assessment
+# JSONPlaceholder Tests
 ## Overview
 
 Framework described below was written for JSONPlaceholder API. It uses WebClient for sending requests and AssertJ for assertions. For working with test data Datafaker, Apache Commons and Jackson libraries were used. Because the framework covers lower level integration tests, test cases were written directly in java instead of using BDD based solutions which are better suited for higher-level, user-centric scenarios. The framework uses design patterns like factory and adapter to create entities such as users and posts, which are utilized in tests.
