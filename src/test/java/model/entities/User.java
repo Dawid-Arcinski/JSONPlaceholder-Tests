@@ -93,7 +93,7 @@ public class User {
                 faker.name().fullName(),
                 faker.internet().username(),
                 faker.internet().emailAddress(),
-                faker.phoneNumber().toString(),
+                faker.phoneNumber().cellPhone(),
                 faker.internet().webdomain(),
                 faker.address().streetName(),
                 faker.address().streetAddressNumber(),
