@@ -18,7 +18,3 @@ JSONPlaceholder API exposes following endpoints:
 - users
 
 Tests in the framework were grouped in separate test classes per endpoint. For every endpoint basic CRUD operations were covered by tests. Due to the fact that JSONPlaceholder does not provide request's body validation negative test cases we limited to one per endpoint (triggering 404 - NOT FOUND error).
-
-## Reporting
-
-Sample test execution report was generated using IntelliJ and included in reports folder. Given more time more dedicated reporting solution like Allure could be integrated into framework.  
